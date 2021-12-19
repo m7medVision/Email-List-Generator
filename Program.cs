@@ -34,16 +34,10 @@ namespace ConsoleApp1
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             Thread S = new Thread(ShowInTheConsole);
             Thread t1 = new Thread(() => Run(mail, num2));
-            Thread t2 = new Thread(() => Run(mail, num2));
-            Thread t3 = new Thread(() => Run(mail, num2));
             t1.Start();
-            t2.Start();
-            t3.Start();
             S.Start();
             S.Join();
             t1.Join();
-            t2.Join();
-            t3.Join();
         }
         public static void Run(string mail, string num2)
         {
